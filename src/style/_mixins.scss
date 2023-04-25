@@ -1,0 +1,75 @@
+@mixin heading {
+   font-size: 32px;
+   font-weight: 700;
+   line-height: auto;
+   color: var(--Marine_blue);
+
+   @media(max-width:425px) {
+      font-size: 24px;
+   }
+}
+
+@mixin text_L {
+   font-size: 16px;
+   line-height: 25px;
+   letter-spacing: 0;
+
+   color: var(--Cool_gray);
+}
+
+@mixin text_M {
+   font-size: 14px;
+   line-height: auto;
+   letter-spacing: 0;
+}
+
+@mixin text_S {
+   font-size: 12px;
+   line-height: auto;
+   letter-spacing: 0;
+}
+
+@mixin title {
+   @include heading;
+   margin: 0;
+   margin-bottom: 15px;
+
+   @media(max-width:425px) {
+      margin-bottom: 30px;
+   }
+}
+
+@mixin subTitle {
+   @include text_L;
+   display: block;
+   width: 100%;
+   margin-top: 11px;
+   font-weight: 500;
+
+   // white-space: nowrap;
+   @media (max-width:768px) {
+      font-weight: 400;
+   }
+}
+
+@mixin button_next {
+   background-color: var(--Marine_blue);
+   color: white;
+   margin-left: auto;
+
+   &:hover {
+      color: white;
+      background-color: var(--Purplish_blue);
+   }
+}
+
+@mixin button_prev {
+   color: var(--Cool_gray);
+   background-color: transparent;
+
+   &:hover {
+      color: var(--Marine_blue);
+   }
+}
+
+@mixin button_confirm {}

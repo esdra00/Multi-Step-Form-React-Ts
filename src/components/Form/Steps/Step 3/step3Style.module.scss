@@ -1,0 +1,81 @@
+@import "../../../../style/mixins";
+
+.title {
+   @include title;
+}
+
+.subTitle {
+   @include subTitle;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.item {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 15px;
+
+   padding: 15px;
+   border-radius: 10px;
+   border: 1px solid var(--Light_gray);
+
+   &:hover {
+      border-color: var(--Purplish_blue);
+   }
+}
+
+[type="checkbox"] {
+   appearance: none;
+   position: absolute;
+   inset: 0;
+   height: 100%;
+   width: 100%;
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+
+.desc {
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--Marine_blue);
+
+   span {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--Cool_gray);
+   }
+}
+
+.icon {
+   height: 20px;
+   width: 20px;
+   border-radius: 4px;
+   border: 1px solid var(--Light_gray);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.check {
+   background-color: var(--Purplish_blue);
+}
+
+.item_check {
+   border-color: var(--Purplish_blue);
+   background-color: var(--Magnolia);
+}
+
+.price {
+   margin-left: auto;
+   color: var(--Purplish_blue);
+   font-size: 14px;
+}
